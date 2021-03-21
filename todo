@@ -1,0 +1,77 @@
+*option to go fullscreen
+*two item toggle    windowed mode  ( fullscreen|windowed )
+
+*Find maximum scaling direction while maintaining aspect ratio ( for windowed and full-screen )
+*use logical coords to define render pos
+*move level rendering into one function that all use
+*Stop crashing if seleciton outside level bound ( just dont select anything)
+*Translate mouse pos to logical coordinates
+*Load souns with rodio
+*play click with rodio   ( try play_once )
+*Fix the gem counter so the same gem is only counted once
+*Play gem hit sound
+*Show ray before dropping ( and play the effect )
+*Enlarge the picked up piece
+*Create scale abut that scales a rectangle defined with (tl, and size ) 
+*Add gem glow
+*Create separate instance of tile batched with glow glsl
+*Add gem vibrate when hit
+*transitions
+*-fade to white when play selected
+*-- rebuild to show the entire ray when solved
+*-- display solution for seconds before moving to next screen
+*-- fade out after solution shown ( increase ray brightness, -> fade to white? )
+*-tile punch
+* tile tickle when moving over movable tile
+* Level Complete text flies in and out ( overlap flying and fading)
+* Level Number text flies in and out ( overlap flying and fading)
+* Back from the main menu does not always work. It goes into a game when going back instead of the main menu - Fixed
+* Save progress and Settings - save calledmultiple times - make sure called once only
+* Better message passing. opening new max level good example of complexity that seems unnecessary. Better to call directly into config?/// or have better message posting
+* Glyph brush params to be updated when screen resolution changes to enable scissoring
+* Same scissoring to be used by other renderers
+
+Fix level with one teleported only ( Find full set of levels )
+- Tidy up sequencing
+-- Hide tile pieces and ray on level show ( and dont let them react to controls )
+-- Show solution faster ( in chunks ) but only start counter when complete solution is shown
+
+Tidy up menus
+-- Scroll for 
+
+- add solution transition 
+- 'Pling' movable piece on show level at the beinning of Level -> Needs a better effect
+
+- Nicer ray
+-   Render polygonal animating ray
+-   pushes/punches tile pieces when they ray hits them (  maybe pull nboring touching pieces)
+-   expand when level complete
+
+Bugs
+- CHanging resolution / or going to in-game menu messes up the tile effect ( they disappear ) - Cant repro  ---> FIxed
+- THe option selector ( full-screen/windowed does not show the actual selection) --> Fixed
+
+
+Add clipping to hide bits outside logical page ( Using scissor rectangle)
+
+Add audio effects
+- hum that fades out when ray changes 
+- Add option to render background only for front
+
+Rescale
+- Scaling looks ugly in some instances  and needs stepping in of tex coords to avoid. Can we make it unnecessary by limiting scale sizes
+
+
+
+
+Load settngs and progress
+
+Settings page
+- turn off audio 
+
+Need a selection UI items
+- text line
+- slider ( audio volume )
+
+
+

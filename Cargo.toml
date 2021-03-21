@@ -1,0 +1,20 @@
+[package]
+name = "beam_puzzle"
+version = "0.1.0"
+authors = ["Jani <jani.peltonen@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num_enum = "0.5.1"
+glium = "0.29.0"
+nalgebra-glm = "0.9.0"
+glium-glyph = "0.10.0"
+glyph_brush = "0.6"
+png = "*"
+image = "*"
+rodio = "0.13.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+platform-dirs = "0.3.0"
